@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngestNewClient", "IngestNewClient\IngestNewClient.csproj", "{B54BA58D-5C38-41DC-AF67-1B7C581FBF11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IngestOldClient", "IngestOldClient\IngestOldClient.csproj", "{CED7B76A-B265-47CC-BE99-68C4A5830DFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOs", "DTOs\DTOs.csproj", "{E46C4256-8F87-44F8-9549-31A44130C167}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B54BA58D-5C38-41DC-AF67-1B7C581FBF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54BA58D-5C38-41DC-AF67-1B7C581FBF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54BA58D-5C38-41DC-AF67-1B7C581FBF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54BA58D-5C38-41DC-AF67-1B7C581FBF11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED7B76A-B265-47CC-BE99-68C4A5830DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED7B76A-B265-47CC-BE99-68C4A5830DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED7B76A-B265-47CC-BE99-68C4A5830DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED7B76A-B265-47CC-BE99-68C4A5830DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E46C4256-8F87-44F8-9549-31A44130C167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E46C4256-8F87-44F8-9549-31A44130C167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E46C4256-8F87-44F8-9549-31A44130C167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E46C4256-8F87-44F8-9549-31A44130C167}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
