@@ -10,13 +10,12 @@ namespace IngestNewClient
 {
     internal static class Program
     {
+        private const int PlanAmount = 1;
+        private const int ChangeEventPerPlanAmount = 1;
         private static readonly char[] Token = "".ToCharArray();
         private static readonly string BucketName = "db0/autogen";
         private static readonly string DbUrl = "http://localhost:8086";
         private static readonly List<string> PlanIDs = new List<string>();
-        
-        private const int PlanAmount = 1;
-        private const int ChangeEventPerPlanAmount = 1;
 
         private static readonly string OrgId = "org_id";
 

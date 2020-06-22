@@ -7,7 +7,7 @@ namespace DTOs
     {
         //    tags
         [Column("propertyName", IsTag = true)] public string PropertyName { get; set; }
-        
+
         //    fields
         [Column("oldValue")] public string OldValue { get; set; }
         [Column("newValue")] public string NewValue { get; set; }

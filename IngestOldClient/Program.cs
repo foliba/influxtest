@@ -10,22 +10,12 @@ namespace IngestOldClient
 {
     internal static class Program
     {
+        private const int PlanAmount = 1;
+        private const int ChangeEventPerPlanAmount = 1;
         private static readonly string DBName = "db0";
         private static readonly string DBUrl = "http://localhost:8086";
         private static readonly List<string> PlanIDs = new List<string>();
-        
-        private const int PlanAmount = 1;
-        private const int ChangeEventPerPlanAmount = 1;
-        
-        private enum PlanProperty
-        {
-            Prop0,
-            Prop1,
-            Prop2,
-            Prop3,
-            Prop4
-        }
-        
+
         private static async Task Main(string[] args)
         {
             Console.WriteLine("Hello Old World!");
@@ -106,6 +96,15 @@ namespace IngestOldClient
                 OldValue = "oldValue1",
                 NewValue = "newValue2"
             };
+        }
+
+        private enum PlanProperty
+        {
+            Prop0,
+            Prop1,
+            Prop2,
+            Prop3,
+            Prop4
         }
     }
 }

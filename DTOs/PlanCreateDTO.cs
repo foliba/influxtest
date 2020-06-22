@@ -6,9 +6,10 @@ namespace DTOs
     public class PlanCreateDTO : PlanBaseDTO
     {
         /// <summary>
-        /// We overwrite the base PlanVersion to make it a fields here.
-        /// This is done because events without a field are silently ignored by the influxDB client.
+        ///     We overwrite the base PlanVersion to make it a fields here.
+        ///     This is done because events without a field are silently ignored by the influxDB client.
         /// </summary>
-        [Column("planVersion")] public override string PlanVersion { get; set; }
+        [Column("planVersion")]
+        public override string PlanVersion { get; set; }
     }
 }

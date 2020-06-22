@@ -12,24 +12,25 @@ namespace DTOs
     // properties of DTOs are always public
     public abstract class PlanBaseDTO
     {
-        //    tags
-        [Column("planID", IsTag = true)] public string PlanId { get; set; }
-        [Column("userId", IsTag = true)] public string UserId { get; set; }
-        [Column("planVersion", IsTag = true)] public virtual string PlanVersion { get; set; }
-        
-        //    fields
-        [Column("comment")] public string Comment { get; set; }
         //[Column(name:"guid", IsTag = true)] public string GUID { get; set; }
-        
+
         //    timestamp
         [Column(IsTimestamp = true)] public DateTime Time;
-        
+
         protected PlanBaseDTO()
         {
             Time = DateTime.UtcNow;
             //GUID = Guid.NewGuid().ToString();
         }
-        
+
+        //    tags
+        [Column("planID", IsTag = true)] public string PlanId { get; set; }
+        [Column("userId", IsTag = true)] public string UserId { get; set; }
+        [Column("planVersion", IsTag = true)] public virtual string PlanVersion { get; set; }
+
+        //    fields
+        [Column("comment")] public string Comment { get; set; }
+
         public LineProtocolPoint ToLineProtocolPoint()
         {
             var fields = new Dictionary<string, object>();
