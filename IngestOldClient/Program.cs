@@ -14,6 +14,9 @@ namespace IngestOldClient
         private static readonly string DbUrl = "http://localhost:8086";
         private static readonly List<string> PlanIDs = new List<string>();
         
+        private const int PlanAmount = 1;
+        private const int ChangeEventPerPlanAmount = 1;
+        
         private enum PlanProperty
         {
             Prop0,
@@ -36,7 +39,7 @@ namespace IngestOldClient
 
             var createEvents = new LineProtocolPayload();
 
-            for (var i = 0; i < 1; i++)
+            for (var i = 0; i < PlanAmount; i++)
                 createEvents.Add(Create_PlanCreateDTO().ToLineProtocolPoint());
 
             var influxResult = await client.WriteAsync(createEvents);
@@ -46,7 +49,7 @@ namespace IngestOldClient
             var changeEvents = new LineProtocolPayload();
             PlanIDs.ForEach(planId =>
             {
-                for (var i = 0; i < 1; i++)
+                for (var i = 0; i < ChangeEventPerPlanAmount; i++)
                     changeEvents.Add(Create_PlanChangeValueDTO(planId, i).ToLineProtocolPoint());
             });
             influxResult = await client.WriteAsync(changeEvents);

@@ -14,6 +14,9 @@ namespace IngestNewClient
         private static readonly string BucketName = "db0/autogen";
         private static readonly string DbUrl = "http://localhost:8086";
         private static readonly List<string> PlanIDs = new List<string>();
+        
+        private const int PlanAmount = 1;
+        private const int ChangeEventPerPlanAmount = 1;
 
         private static readonly string OrgId = "org_id";
 
@@ -31,13 +34,13 @@ namespace IngestNewClient
             using (var writeApi = influxDBClient.GetWriteApi())
             {
                 //    create events
-                for (var i = 0; i < 1; i++)
+                for (var i = 0; i < PlanAmount; i++)
                     writeApi.WriteMeasurement(BucketName, OrgId, WritePrecision.Ns, Create_PlanCreateDTO());
 
                 //    change events
                 PlanIDs.ForEach(planId =>
                 {
-                    for (var i = 0; i < 5; i++)
+                    for (var i = 0; i < ChangeEventPerPlanAmount; i++)
                         writeApi.WriteMeasurement(BucketName, OrgId, WritePrecision.Ns,
                             Create_PlanChangeValueDTO(planId, i));
                 });
