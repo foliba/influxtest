@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 using InfluxDB.Client.Core;
@@ -7,6 +8,8 @@ using InfluxDB.LineProtocol.Payload;
 
 namespace DTOs
 {
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
+    // properties of DTOs are always public
     public abstract class PlanBaseDTO
     {
         //    tags
