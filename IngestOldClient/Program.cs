@@ -11,7 +11,7 @@ namespace IngestOldClient
     internal static class Program
     {
         private static readonly string DBName = "db0";
-        private static readonly string DbUrl = "http://localhost:8086";
+        private static readonly string DBUrl = "http://localhost:8086";
         private static readonly List<string> PlanIDs = new List<string>();
         
         private const int PlanAmount = 1;
@@ -35,7 +35,7 @@ namespace IngestOldClient
                 Console.WriteLine($"{message}: {exception}");
             });
 
-            var client = new LineProtocolClient(new Uri(DbUrl), DBName);
+            var client = new LineProtocolClient(new Uri(DBUrl), DBName);
 
             var createEvents = new LineProtocolPayload();
 
