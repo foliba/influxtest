@@ -8,7 +8,7 @@ using InfluxDB.Collector.Diagnostics;
 
 namespace IngestNewClient
 {
-    internal class Program
+    internal static class Program
     {
         private static readonly char[] Token = "".ToCharArray();
         private static readonly string BucketName = "db0/autogen";

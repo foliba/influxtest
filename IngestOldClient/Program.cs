@@ -8,7 +8,7 @@ using InfluxDB.LineProtocol.Payload;
 
 namespace IngestOldClient
 {
-    internal class Program
+    internal static class Program
     {
         private static readonly string DBName = "db0";
         private static readonly string DbUrl = "http://localhost:8086";
